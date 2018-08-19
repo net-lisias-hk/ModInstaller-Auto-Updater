@@ -1,0 +1,11 @@
+C:\Users\Ricardo Souza\GitLab\AutoUpdater\ModInstallerAutoUpdater\ModInstallerAutoUpdater\bin\Debug\ModInstallerAutoUpdater.exe.config
+C:\Users\Ricardo Souza\GitLab\AutoUpdater\ModInstallerAutoUpdater\ModInstallerAutoUpdater\bin\Debug\ModInstallerAutoUpdater.exe
+C:\Users\Ricardo Souza\GitLab\AutoUpdater\ModInstallerAutoUpdater\ModInstallerAutoUpdater\bin\Debug\ModInstallerAutoUpdater.pdb
+C:\Users\Ricardo Souza\GitLab\AutoUpdater\ModInstallerAutoUpdater\ModInstallerAutoUpdater\obj\Debug\ModInstallerAutoUpdater.csprojAssemblyReference.cache
+C:\Users\Ricardo Souza\GitLab\AutoUpdater\ModInstallerAutoUpdater\ModInstallerAutoUpdater\obj\Debug\ModInstallerAutoUpdater.Autoupdater.resources
+C:\Users\Ricardo Souza\GitLab\AutoUpdater\ModInstallerAutoUpdater\ModInstallerAutoUpdater\obj\Debug\ModInstallerAutoUpdater.Properties.Resources.resources
+C:\Users\Ricardo Souza\GitLab\AutoUpdater\ModInstallerAutoUpdater\ModInstallerAutoUpdater\obj\Debug\ModInstallerAutoUpdater.csproj.GenerateResource.cache
+C:\Users\Ricardo Souza\GitLab\AutoUpdater\ModInstallerAutoUpdater\ModInstallerAutoUpdater\obj\Debug\ModInstallerAutoUpdater.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo Souza\GitLab\AutoUpdater\ModInstallerAutoUpdater\ModInstallerAutoUpdater\obj\Debug\ModInstallerAutoUpdater.exe
+C:\Users\Ricardo Souza\GitLab\AutoUpdater\ModInstallerAutoUpdater\ModInstallerAutoUpdater\obj\Debug\ModInstallerAutoUpdater.pdb
+C:\Users\Ricardo Souza\GitLab\AutoUpdater\ModInstallerAutoUpdater\ModInstallerAutoUpdater\obj\Debug\ModInstallerAutoUpdater.DownloadHelper.resources
