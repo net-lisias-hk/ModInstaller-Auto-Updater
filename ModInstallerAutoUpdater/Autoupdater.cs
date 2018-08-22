@@ -27,20 +27,20 @@ namespace ModInstallerAutoUpdater
 
         private void Autoupdater_Load(object sender, System.EventArgs e)
         {
-            DoUpdate(path);
+            DoUpdate();
         }
 
-        private void DoUpdate(string path)
+        private void DoUpdate()
         {
-            DownloadHelper download = new DownloadHelper(link, this.path + @"/lol.exe");
+            DownloadHelper download = new DownloadHelper(link, path + @"/lol.exe");
             download.Closed += Download_Closed;
             download.ShowDialog();
         }
 
         private void Download_Closed(object sender, EventArgs e)
         {
-            File.Copy(this.path + @"/lol.exe", this.path + @"/ModInstaller.exe", true);
-            Process.Start(this.path + @"/ModInstaller.exe");
+            File.Copy(path + @"/lol.exe", path + @"/ModInstaller.exe", true);
+            Process.Start(path + @"/ModInstaller.exe");
             Application.Exit();
         }
 
