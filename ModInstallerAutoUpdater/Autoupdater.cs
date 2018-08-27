@@ -18,11 +18,12 @@ namespace ModInstallerAutoUpdater
 {
     public partial class Autoupdater : Form
     {
-        public Autoupdater(string[] path)
+        public Autoupdater(string[] args)
         {
-            InitializeComponent(path[0]);
-            this.path = path[0];
-            link = new Uri (path[1]);
+            InitializeComponent(args[0]);
+            this.path = args[0];
+            link = new Uri (args[1]);
+            name = args[2];
         }
 
         private void Autoupdater_Load(object sender, System.EventArgs e)
@@ -39,11 +40,12 @@ namespace ModInstallerAutoUpdater
 
         private void Download_Closed(object sender, EventArgs e)
         {
-            File.Copy(path + @"/lol.exe", path + @"/ModInstaller.exe", true);
-            Process.Start(path + @"/ModInstaller.exe");
+            File.Copy(path + @"/lol.exe", path + @"/" + Path.GetFileName(name), true);
+            Process.Start(path + @"/" + Path.GetFileName(name));
             Application.Exit();
         }
 
+        private string name;
         private string path;
         private Uri link;
     }

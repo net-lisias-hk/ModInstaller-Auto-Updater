@@ -27,8 +27,6 @@ namespace ModInstallerAutoUpdater
 
         private void StartDownload(Uri uri, string path)
         {
-            MessageBox.Show(uri.ToString());
-            MessageBox.Show(path);
             using (webClient = new WebClient())
             {
                 webClient.DownloadFileCompleted += Completed;
