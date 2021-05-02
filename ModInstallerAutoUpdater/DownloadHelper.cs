@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ModInstallerAutoUpdater
@@ -27,26 +21,15 @@ namespace ModInstallerAutoUpdater
 
         private void StartDownload(Uri uri, string path)
         {
-            using (webClient = new WebClient())
+            try
             {
-                webClient.DownloadFileCompleted += Completed;
-                webClient.DownloadProgressChanged += ProgressChanged;
-
-                // Start the stopwatch which we will be using to calculate the download speed
-                sw.Start();
-
-                try
-                {
-                    // Start downloading the file
-                    webClient.DownloadFileAsync(uri, path);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                Util.DownloadFile(uri, path, this.ProgressChanged, this.Completed);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
-
 
         // The event that will fire whenever the progress of the WebClient is changed
         private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -60,8 +43,7 @@ namespace ModInstallerAutoUpdater
             progressBar.Value = e.ProgressPercentage;
 
             // Update the label with how much data have been downloaded so far and the total size of the file we are currently downloading
-            labelDownloaded.Text =
-                $"{(e.BytesReceived / 1024d / 1024d).ToString("0.00")} MB / {(e.TotalBytesToReceive / 1024d / 1024d).ToString("0.00")} MB";
+            labelDownloaded.Text = $"{(e.BytesReceived / 1024d / 1024d).ToString("0.00")} MB / {(e.TotalBytesToReceive / 1024d / 1024d).ToString("0.00")} MB";
         }
 
         // The event that will trigger when the WebClient is completed
@@ -74,7 +56,6 @@ namespace ModInstallerAutoUpdater
             Close();
         }
         
-        private WebClient webClient;
-        private Stopwatch sw = new Stopwatch();
+        private readonly Stopwatch sw = new Stopwatch();
     }
 }
