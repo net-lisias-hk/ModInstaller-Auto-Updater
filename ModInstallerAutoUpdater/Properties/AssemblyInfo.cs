@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ModInstallerAutoUpdater")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("© 2021 Lisias, © 2018 Gadow")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
