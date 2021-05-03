@@ -52,7 +52,8 @@ namespace ModInstallerAutoUpdater
             // Reset the stopwatch.
             sw.Reset();
 
-            MessageBox.Show(e.Cancelled ? "Download has been canceled." : "Download completed!");
+            if (e.Cancelled)
+                MessageBox.Show(this, "Download has been canceled.");
             Close();
         }
         
