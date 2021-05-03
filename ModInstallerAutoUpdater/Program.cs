@@ -11,6 +11,7 @@ namespace ModInstallerAutoUpdater
         [STAThread]
         static void Main(string[]  arg)
         {
+            EmbeddedAssemblies.Init();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Autoupdater(arg));
